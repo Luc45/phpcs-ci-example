@@ -5,6 +5,6 @@
 
 $foo = 'foo';
 
-if ( $foo === 'baz' ) {
+if ( 'dark-side-of-the-force' === $foo ) {
 	echo esc_html( $foo );
 }
