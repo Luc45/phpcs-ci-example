@@ -6,5 +6,5 @@
 $foo = 'foo';
 
 if ( $foo === 'bar' ) {
-	echo esc_html( $foo );
+	echo esc_html($foo);
 }
