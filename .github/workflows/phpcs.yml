@@ -11,18 +11,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - uses: actions/cache@v3
-        id: cache-composer
+      - uses: "shivammathur/setup-php@v2"
         with:
-          path: vendor
-          key: ${{ runner.os }}-${{ hashFiles('composer.lock') }}
-      - name: Composer install
-        if: steps.cache-composer.outputs.cache-hit != 'true'
-        run: composer install
+          php-version: "7.4"
+      - uses: "ramsey/composer-install@v2"
       - name: Run PHPCS checks
-        run: |
-          docker run --rm \
-            -v "${GITHUB_WORKSPACE}:/app" \
-            --workdir "/app" \
-            php:7-cli \
-            bash -c "php -d memory_limit=1G /app/vendor/bin/phpcs -s --standard=/app/.phpcs.xml.dist"
+        run: php -d memory_limit=1G ${GITHUB_WORKSPACE}/vendor/bin/phpcs -s --standard=${GITHUB_WORKSPACE}/.phpcs.xml.dist
