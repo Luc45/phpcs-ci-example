@@ -3,8 +3,8 @@
  * Plugin name: Foo
  */
 
-$foo = 'foo';
+$fooBar = 'foo';
 
-if ( 'dark-side-of-the-force' === $foo ) {
-	echo esc_html( $foo );
+if ( $fooBar === 'baz' ) {
+	echo esc_html( $fooBar );
 }
