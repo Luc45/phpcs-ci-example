@@ -3,3 +3,5 @@
 # PHPCS CI Example
 
 This repository is an example to run PHPCS checks in CI, part of [WPCS Documentation](https://github.com/WordPress/WordPress-Coding-Standards/wiki/Running-in-GitHub-Actions).
+
+Trigger CI (Test cache)
