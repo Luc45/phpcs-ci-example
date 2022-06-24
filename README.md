@@ -1,4 +1,5 @@
 [![PHPCS checks](https://github.com/Luc45/phpcs-ci-example/actions/workflows/phpcs.yml/badge.svg)](https://github.com/Luc45/phpcs-ci-example/actions/workflows/phpcs.yml)
+[![PHPCS checks (Docker Alternative)](https://github.com/Luc45/phpcs-ci-example/actions/workflows/phpcs-docker-alternative.yml/badge.svg)](https://github.com/Luc45/phpcs-ci-example/actions/workflows/phpcs-docker-alternative.yml)
 
 # PHPCS CI Example
 
