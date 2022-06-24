@@ -3,8 +3,8 @@
  * Plugin name: Foo
  */
 
-$fooBar = 'foo';
+$foo = 'foo';
 
-if ( $fooBar === 'baz' ) {
-	echo esc_html( $fooBar );
+if ( $foo === 'baz' ) {
+	echo esc_html($foo);
 }
