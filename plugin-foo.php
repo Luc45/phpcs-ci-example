@@ -5,6 +5,6 @@
 
 $foo = 'foo';
 
-if ( $foo === 'bar' ) {
+if ( $foo === 'baz' ) {
 	echo esc_html( $foo );
 }
