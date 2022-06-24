@@ -1,0 +1,19 @@
+name: PHPCS checks
+on:
+  push
+jobs:
+  phpcs:
+    name: PHPCS
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Composer install
+        run: composer install
+      - name: Run PHPCS checks
+        run: docker run --rm \
+          --user 0:0 \
+          -v "${PWD}:/app" \
+          --workdir "${GITHUB_WORKSPACE}" \
+          php:7-cli \
+          bash -c "php -d memory_limit=1G ./vendor/bin/phpcs -s --standard=/app/.phpcs.xml.dist"
